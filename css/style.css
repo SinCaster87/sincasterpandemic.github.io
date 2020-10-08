@@ -24,11 +24,14 @@ body {
   font-family: 'Quicksand', sans-serif;
   text-align:center;
   color: white;
+  fill: white;
 }
 #paper{
-	height: 200vh;
-	width: 500vh;
+	height: 125vh;
+	width: 200vw;
 	min-height: 100%;
+  /*font-family: 'Quicksand', sans-serif;*/
+
 }
 .container{
 position: absolute;

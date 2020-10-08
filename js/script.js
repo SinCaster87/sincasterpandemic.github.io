@@ -175,7 +175,7 @@ function clear(){
 function initTree(storyObject, graph) {
 
 	var rect = new joint.shapes.standard.Rectangle();
-	rect.position(900, 50);
+	rect.position(1500, 50);
 	rect.resize(500, 50);
 	rect.attr({
 		label: {
@@ -253,10 +253,14 @@ renderStory(currentStory);
     });
 		paper.on('cell:pointerdown',
 		    function(cellView, evt, x, y) {
-						if(cellView.model.story.choices != null && cellView.model.story.choices != {}){
+						if(cellView.model.story.choices != null && cellView.model.story.choices != {}){ 
+							//code that runs when you click any node that is not the bottom
 		        drawAndConnectChildren(cellView.model,cellView.model.story,cellView.model.graph);
+		        cellView.model.attr('body/fill','lightgreen');
 					}else {
+						//code that runs when you click a bottom node
 						console.log("No more story");
+						cellView.model.attr('body/fill','lightgreen');
 					}
 		    }
 		);
